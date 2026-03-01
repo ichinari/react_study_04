@@ -7,11 +7,7 @@ function UseContext_1() {
   const { user, login, logout } = useAuth();
 
   const handleLogin = () => {
-    try {
-      login({ id: 1, username: loginForm.username, email: loginForm.email });
-    } catch (error) {
-      console.error(error);
-    }
+    login({ id: 1, username: loginForm.username, email: loginForm.email });
   };
 
   // NOTE: userの状態変化を監視してフォームをリセットする
@@ -34,6 +30,7 @@ function UseContext_1() {
         <div className="flex gap-2 items-center">
           <p className="text-lg font-bold mr-5">logged in</p>
           <button
+            type="button"
             className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
             onClick={handleLogout}
           >

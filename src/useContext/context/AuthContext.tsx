@@ -10,11 +10,7 @@ const AuthContext = createContext<{
   user: UserInfo | null;
   login: (userInfo: UserInfo) => void;
   logout: () => void;
-}>({
-  user: null,
-  login: () => {},
-  logout: () => {},
-});
+} | null>(null);
 
 const USER_NAME = "test";
 const USER_EMAIL = "test@example.com";

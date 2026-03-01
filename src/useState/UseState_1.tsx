@@ -3,7 +3,7 @@ import { useState } from "react";
 function UseState_1() {
   const [age, setAge] = useState<number>(0);
   const handleAddAge = () => {
-    setAge(age + 1);
+    setAge((prev) => prev + 1);
   };
   return (
     <div>

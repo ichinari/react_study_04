@@ -15,6 +15,7 @@ function UseState_2() {
             ①
           </label>
           <input
+            id="name"
             type="text"
             className="border border-black"
             value={formData.name}
@@ -26,6 +27,7 @@ function UseState_2() {
             ②
           </label>
           <input
+            id="age"
             type="text"
             className="border border-black"
             value={formData.age}
@@ -37,6 +39,7 @@ function UseState_2() {
             ③
           </label>
           <input
+            id="email"
             type="text"
             className="border border-black"
             value={formData.email}

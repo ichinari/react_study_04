@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className="p-10">
-        {/* lern hooks */}
+        {/* learn hooks */}
         {/* NOTE: learn useState */}
         <UseState_1 />
         <UseState_2 />

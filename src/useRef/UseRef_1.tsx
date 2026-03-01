@@ -11,10 +11,9 @@ function UseRef_1() {
 
   return (
     <div className="flex flex-col items-center gap-5">
-      <button className="border p-2 rounded-md bg-gray-200" onClick={handleClick}>
+      <button type="button" className="border p-2 rounded-md bg-gray-200" onClick={handleClick}>
         Click me
       </button>
-      <p></p>
     </div>
   );
 }

@@ -17,8 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/hooks/*": ["src/hooks/*"],
+      "@/*": ["src/*"]
     },
 
     /* Linting */

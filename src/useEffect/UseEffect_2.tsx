@@ -8,6 +8,13 @@ function UseEffect_2() {
   useEffect(() => {
     let ignore = false;
 
+    if (!person) {
+      setBio("");
+      return () => {
+        ignore = true;
+      };
+    }
+
     const fetchBioData = async () => {
       const bio = await fetchBio(person);
       if (!ignore) {

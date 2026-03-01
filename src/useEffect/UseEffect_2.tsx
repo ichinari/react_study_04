@@ -33,7 +33,9 @@ function UseEffect_2() {
     <>
       <div>
         <div className="mb-3">
+          <label htmlFor="person">select a name</label>
           <select
+            id="person"
             className="border border-black w-auto"
             value={person}
             onChange={(e) => setPerson(e.target.value)}

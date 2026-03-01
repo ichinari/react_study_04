@@ -19,12 +19,16 @@ export const useFetchUser = (id: number) => {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    let isMounted = true; // マウントされているかどうかを判断するためのフラグ
+    const controller = new AbortController();
+
     const fetchUser = async () => {
       setIsLoading(true);
+      setUser(null);
 
       try {
-        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+          signal: controller.signal,
+        });
 
         if (!res.ok) {
           throw new Error("Failed to fetch user");
@@ -32,22 +36,21 @@ export const useFetchUser = (id: number) => {
 
         const data: User = await res.json();
 
-        if (isMounted) {
-          setUser(data);
-          setIsLoading(false);
-        }
+        setUser(data);
       } catch (error) {
-        if (isMounted) console.warn("error:", error);
+        if (error instanceof Error && error.name === "AbortError") {
+          console.warn("error:", error);
+        }
       } finally {
-        if (isMounted) setIsLoading(false);
+        setIsLoading(false);
       }
     };
 
     fetchUser();
 
     return () => {
-      isMounted = false;
+      controller.abort();
     };
-  }, []);
+  }, [id]);
   return { isLoading, user };
 };

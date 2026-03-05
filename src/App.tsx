@@ -14,13 +14,18 @@
 // import UseRef_4 from "@/useRef/UseRef_4";
 
 // NOTE: useContext hooks
-import UseContext_1 from "@/useContext/UseContext_1";
+// import UseContext_1 from "@/useContext/UseContext_1";
+
+// NOTE: useCallback and useMemo hook
+// import Memo_1 from "@/memoFunctions/memo_1";
+// import Memo_2 from "@/memoFunctions/memo_2";
+import Memo_3 from "@/memoFunctions/memo_3";
 
 function App() {
   return (
     <>
       <div className="p-10">
-        {/* lern hooks */}
+        {/* learn hooks */}
         {/* NOTE: learn useState */}
         {/* <UseState_1 /> */}
         {/* <UseState_2 /> */}
@@ -37,7 +42,12 @@ function App() {
         {/* <UseRef_4 /> */}
 
         {/* NOTE: learn useContext */}
-        <UseContext_1 />
+        {/* <UseContext_1 /> */}
+
+        {/* NOTE: learn useCallback */}
+        {/* <Memo_1 /> */}
+        {/* <Memo_2 /> */}
+        <Memo_3 />
       </div>
     </>
   );

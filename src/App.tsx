@@ -20,6 +20,7 @@
 // import Memo_1 from "@/memoFunctions/memo_1";
 // import Memo_2 from "@/memoFunctions/memo_2";
 import Memo_3 from "@/memoFunctions/memo_3";
+import UseOptimistic_1 from "./useOptimistic/useOptimistic_1";
 
 function App() {
   return (
@@ -47,7 +48,10 @@ function App() {
         {/* NOTE: learn useCallback */}
         {/* <Memo_1 /> */}
         {/* <Memo_2 /> */}
-        <Memo_3 />
+        {/* <Memo_3 /> */}
+
+        {/* NOTE: learn useOptimistic */}
+        <UseOptimistic_1 />
       </div>
     </>
   );

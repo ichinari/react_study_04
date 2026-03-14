@@ -5,6 +5,7 @@ type Props = {
 };
 const Biography = ({ artistId }: Props) => {
   const bio = use(fetchData(`/${artistId}/bio`));
+
   return (
     <section>
       <p className="bio">{bio}</p>

@@ -19,7 +19,10 @@
 // NOTE: useCallback and useMemo hook
 // import Memo_1 from "@/memoFunctions/memo_1";
 // import Memo_2 from "@/memoFunctions/memo_2";
-import Memo_3 from "@/memoFunctions/memo_3";
+// import Memo_3 from "@/memoFunctions/memo_3";
+// import UseTransition_1 from "@/useTransition/UseTransition_1";
+// import UseTransiton_2 from "./useTransition/UseTransition_2";
+import UseTransition_3 from "./useTransition/UseTransition_3";
 
 function App() {
   return (
@@ -47,7 +50,12 @@ function App() {
         {/* NOTE: learn useCallback */}
         {/* <Memo_1 /> */}
         {/* <Memo_2 /> */}
-        <Memo_3 />
+        {/* <Memo_3 /> */}
+
+        {/* NOTE: learn useTransition */}
+        {/* <UseTransition_1 /> */}
+        {/* <UseTransiton_2 /> */}
+        <UseTransition_3 />
       </div>
     </>
   );
